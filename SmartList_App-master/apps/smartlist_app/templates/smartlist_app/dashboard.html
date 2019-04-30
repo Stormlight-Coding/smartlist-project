@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SmartList</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+    {% load static %}
+  <!-- The line above tells Django to be ready to listen for static files -->
+  <link rel="stylesheet" href="{% static 'smartlist_app/css/style2.css' %}" media="screen" title="no title"  charset="utf-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Import materialize.css -->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  </head>
+  <body>
+    <!-- <nav> -->
+        <div id="header">
+          <div id="logo">
+              <i class="material-icons">done_all</i><h2>SmartList</h2>
+
+          </div>
+          <h1>Hello Liz!</h1>
+
+        </div>
+    <!-- </nav> -->
+    <div id="search">
+      <form class="query" action="add_todo" method="post">
+        {% csrf_token %}
+      <input id="query" type="text" name="query" placeholder="Plan Your Day"><i class="material-icons prefix">mode_edit</i>
+        <input id="search-button" onclick="keyWordsearch()" type="submit" value="Add">
+
+      </form><br>
+    </div>
+
+    {% for todo in todos%}
+    <div id="list">
+      <h2>{{todo.name}}</h2> <span class="done"><a class="waves-effect waves-light  blue-grey lighten-2 btn" href="todo_done/{{todo.id}}">Complete</a> <a class="waves-effect waves-light  blue-grey lighten-2 btn" href="delete/{{todo.id}}">Delete</a></span>
+      <h3>Web Resources</h3>
+        {% for resource in todo.created_resources.all|slice:":3" %}
+        <h4> <a href="{{resource.link}}">{{resource.title}}</a><a href="delete/resource/{{resource.id}}"></a><a id ="special" href="delete/resource/{{resource.id}}">  X</a></h4>
+      <p>{{resource.snippet}}</p>
+        <hr>
+        {%endfor%}
+        <h3>Video Resources</h3>
+        <div id="videos" class="carousel">
+        {% for video in todo.created_video.all %}
+          <a a href= "https://www.youtube.com/embed/{{video.link}}" class="carousel-item"><img src={{video.snippet}}></a>
+        {% endfor %}
+        </div>
+
+
+     </div><br><br>
+    {%endfor%}
+
+
+    <form class="" action="history" method="post">
+        {% csrf_token %}
+      <a class="waves-effect waves-light blue-grey lighten-2  btn"><input type="submit" name="" value="History"></a> <a class="waves-effect waves-light blue-grey lighten-2  btn"><input type="submit" name="" value="Logout"></a>
+    </form>
+
+
+    <div id="fb-root"></div>
+    <div class="fb-share-button" data-href="http://local.liz.com:8000/dashboard" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocal.liz.com%3A8000%2Fdashboard&amp;src=sdkpreparse">Share</a></div>
+
+    <script>
+    $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+    </script>
+
+  </body>
+</html>

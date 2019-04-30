@@ -1,0 +1,160 @@
+body {
+  background-image: url("login1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  text-align: center;
+  font-family: GillSans, Calibri, Trebuchet, sans-serif
+  /*font-family: garamond;*/
+}
+#header{
+  /*background-image: url("https://4.bp.blogspot.com/-E51bDR8PrEo/V0xSOmJgJbI/AAAAAAAAATI/wRmdMQuf9Ygmu2iXz5y18Gpa5KADeYmbQCLcB/s1600/notebook%2Band%2Bcoffee.jpg") ;*/
+  margin-top: -35px;
+  text-align: right;
+  padding-right: 15px;
+  padding-top: 10px;
+  background-color: #faf7f5;
+
+}
+
+
+#header h1{
+  display: inline-block;
+  font-family: Trebuchet, sans-serif;
+  padding-right: 70px;
+  color: #faf7f5;
+}
+#logo h2{
+  color: black;
+  font-size: 40px;
+  display: inline-block;
+  padding-left: -40px;
+}
+#logo i{
+  font-size: 60px;
+  padding-left: 10px;
+}
+#logo {
+  color: purple;
+  display: inline-block;
+  float: left;
+  margin-top: 30px;
+}
+.done {
+  margin-left: 10px;
+}
+a{
+  text-decoration: none;
+  color: grey;
+}
+
+.resources {
+    margin-left: 40px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-family: Trebuchet, sans-serif;
+
+
+}
+#list h2{
+  margin-left: auto;
+  margin-right: auto;
+  font-size:  40px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: -8px;
+}
+#list h3{
+  font-size: 25px;
+  margin-bottom: -20px;
+}
+h4 {
+  font-weight: bold;
+  margin: 5px;
+}
+h4 a{
+  text-decoration: underline;
+  color: #212121;
+  font-size: 20px;
+}
+#list p{
+  margin-top: -15px;
+}
+.query{
+
+  margin-left: auto;
+  margin-right: auto;
+}
+#search {
+
+  /*margin-left: 30px;*/
+  width: 330px;
+  height: 60px;
+  padding-top: 20px;
+
+  /*background: #faf7f5*/
+}
+#history{
+  display: inline-block;
+}
+#query, #search_button {
+  display: inline-block;
+  width: 200px
+}
+
+#search_button{
+  color: red
+}
+#query{
+  font-size: 30px;
+  text-align: center;
+}
+p {
+  margin: 5px;
+}
+#videos{
+  height: 200px;
+  margin-top: 40px;
+  margin-bottom: -10px;
+}
+#list i{
+  color: green;
+}
+#delete{
+  color: red;
+}
+#list, .his {
+  margin-top: 20px;
+  width: 900px;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  text-align: left;
+  box-shadow: 10px 10px 5px #888888;
+  padding: 10px;
+  opacity: .8;
+  margin-left: 100px;
+  background-color: white;
+  border-radius: 10px;
+}
+#his {
+  color:black;
+}
+#p {
+  color: black;
+}
+#special {
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+button{
+  width: auto;
+  position: center;
+  background-color: white;
+  color: white;
+  border-radius: 8px;
+  font-family: Helvetica;
+  font-size: 13px;
+}

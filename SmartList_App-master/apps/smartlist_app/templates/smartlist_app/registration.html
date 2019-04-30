@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Smart List</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    {% load static %}
+  <!-- The line above tells Django to be ready to listen for static files -->
+  <link rel="stylesheet" href="{% static 'smartlist_app/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+  
+  </head>
+  <body>
+    <div class="login_wrapper">
+      <div class="login">
+
+    <h2>Registration</h2>
+    <form action="/register" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">First Name</label>
+            <input type="text" name="name">
+        </div>
+        <div class="form-group">
+            <label for="alias">Last Name</label>
+            <input type="text" name="alias">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </div>
+        <div class="form-group">
+            <label for="password_confirm">Confirm Password</label>
+            <input type="password" name="password_confirm">
+        </div>
+        <input type="submit" value='Register'>
+    </form>
+  </div>
+  <form class="register_button" action="/" method="POST">
+    {% csrf_token %}
+
+    <input type="submit" value="Back">
+  </form>
+  </div>
+  </body>
+</html>

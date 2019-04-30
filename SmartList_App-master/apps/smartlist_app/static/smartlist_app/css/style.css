@@ -1,0 +1,112 @@
+
+body {
+margin:0px;
+}
+.done {
+margin-left: 40px;
+font-size: 20px;
+}
+.done a {
+text-decoration: none;
+}
+
+.resources {
+ margin-left: 40px;
+}
+h1 {
+color: black;
+/*position: absolute;
+top: 80px;
+left: 586px;*/
+}
+
+h4 {
+font-weight: bold;
+margin: 5px;
+
+
+}
+p {
+margin: 5px;
+}
+/*background image*/
+.login_wrapper {
+
+position: relative;
+border: 1px solid gray;
+/*width: 600px;*/
+height: 900px;
+margin-left: auto;
+margin-right: auto;
+background-image:url("login.jpg");
+align-self: center;
+background-size: cover;
+background-repeat: no-repeat;
+opacity: 0.8;
+}
+
+/*login interface*/
+.login{
+/*position: relative;*/
+/*box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);*/
+margin-top: 200px;
+margin-left: auto;
+margin-right: auto;
+width: 400px;
+/*opacity: none;*/
+/*background-color: blue;*/
+
+}
+
+
+label{
+ display: inline-block;
+ float: left;
+ clear: left;
+ width: 250px;
+ text-align: left;
+}
+input {
+display: inline-block;
+float: left;
+
+}
+
+.form-group input{
+ background-color: transparent;
+ border: none;
+ border-bottom: 1px solid #9e9e9e;
+ border-radius: 0;
+ outline: none;
+ height: 3rem;
+ width: 100%;
+ font-size: 1rem;
+ margin: 0 0 20px 0;
+ padding: 0;
+ /*-webkit-box-shadow: none;*/
+ box-shadow: none;
+
+ /*-webkit-box-sizing: content-box;*/
+ box-sizing: content-box;
+ /*-webkit-transition: all 0.3s;*/
+ /*transition: all 0.3s;*/
+}
+
+.fb-login-button, fb-lo{
+
+position: absolute;
+top: 50px;
+right: 50px;
+
+padding-bottom: 60px;
+}
+/*facebook login button div*/
+
+.login_button{
+/*margin-top: 10px;*/
+display: block;
+}
+
+.register_button{
+margin-top: 20px;
+}
