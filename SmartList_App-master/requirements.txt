@@ -41,5 +41,5 @@ social-auth-core==1.4.0
 tesseract-ocr==0.0.1
 traitlets==4.3.2
 uritemplate==3.0.0
-urllib3==1.22
+urllib3==1.26.5
 wcwidth==0.1.7
